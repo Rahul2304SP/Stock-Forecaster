@@ -46,7 +46,7 @@ def fetch_last_prices(ticker_list):
                 prices[t] = float(df['Close'][t].iloc[-1])
         except Exception:
             prices[t] = None
-    return {t: p for t, p in prices.items() if p is not None}
+    return {t: p for t, p in prices.items() if p is not None} 
 
 def compute_price_weights(price_dict):
     """Price weights for a price-weighted index (sum to 1)."""
